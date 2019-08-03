@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :move_to_index,except: :index
+  before_action :move_to_index,except: [:index,:show]
   def new
     @post = Post.new
   end
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end  
   def show
     @post = Post.find(params[:id])
-    @comment = Comment.new(user_id: current_user.id)
+    @comment = Comment.new
     @comments = @post.comments.order("")
   end
   def index

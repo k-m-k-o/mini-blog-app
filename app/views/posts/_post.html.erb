@@ -4,7 +4,7 @@
     <p><%= link_to post.user.name,"/users/#{post.user.id}",method: :get ,class: "user-btn" %></p>
     <h2><%= post.title %></h2>
     <p><%= post.text %><p>
-    <p class="date"><%= post.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+    <p class="date"><%= post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>  [コメント： <%= post.comments.count %>件]</p>
   </div>
   <div class="post-detail">
     <ul class="post-options">
