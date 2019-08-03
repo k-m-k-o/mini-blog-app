@@ -1,0 +1,116 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.container{
+  padding-top:80px;
+  width:80%;
+  margin:0 auto;
+ 
+}
+.new-post-form{
+  margin:0 auto;
+  width:80%;
+
+}
+.post-content-title h2{
+  font-size:25px;
+  padding:-10px;
+  
+}
+
+.post-detail{
+  float:right;
+  padding-right:20px;
+  padding-top:10px;
+}
+.post-content-title{
+  
+  width:70%;
+  float:left;
+ 
+  padding-left:20px;
+}
+.post-detail{
+  font-size:20px;
+  float:right;
+  text-align: right;
+  width:20%;
+
+}
+.post-list-content{
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.6);
+  width:90%;
+  min-height:150px;
+  height:auto;
+  margin:10px auto;
+  border:solid 0.2px #a8ffd3;
+  
+  overflow:hidden
+}
+.date{
+  text-align:right;
+  color:gray;
+  font-size:10px;
+}
+.comment-content{
+width:80%;
+margin:0 auto;
+
+
+}
+.comment-input-form{
+ padding-top:-10px;
+ width:100%;
+ padding-left:30px;
+ padding-bottom:20px;
+ background-color: #e2ffc6;
+ border:solid 0.1px #c4ff89;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.6);
+
+}
+.comment-textbox{
+  width:300px;
+  height:30px;
+  float:left;
+  clear:both;
+}
+.comment-submit{
+  height:38px;
+  width:55px;
+  margin-left:10px;
+  
+}
+.comment-user{
+  padding-top:10px;
+}
+.comments {
+  margin-top:10px;
+  padding-left:30px;
+  height:100px;
+  
+  width:100%;
+  margin:10px auto;
+  border:solid 0.1px #c4ff89;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.6);
+
+}
+.post-options{
+  list-style: none;
+}
+.btn{
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.6);
+  text-decoration: none;
+  color:black;
+  background-color: white;
+  padding:5px 10px;
+  font-size:10px;
+}
+.user-btn{
+  text-decoration: none;
+  color:black;
+}
+.page-btn{
+  text-decoration: none;
+  padding-left:30px; 
+  
+}

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="show-post">
+     <div class="post-list-content">
+        <div class="post-content-title">
+          <p><%= link_to @post.user.name,"/users/#{@post.user.id}",method: :get ,class: "user-btn" %></p>
+          <h2><%= @post.title %></h2>
+          <p><%= @post.text %><p>
+          <p class="date"><%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+        </div>
+       <div class="post-detail">
+          <ul class="post-options">
+            <% if user_signed_in? && current_user.id == @post.user.id%>
+              
+              <li>
+                 <%= link_to  "編集","/posts/#{@post.id}/edit",method: :get,class: "btn" %>
+              </li>
+              <li>
+               <%= link_to "削除","/posts/#{@post.id}",method: :delete,class: "btn"%>
+              </li>
+
+            <%end%>
+          </ul> 
+      </div>
+    </div>
+  </div>
+  <div class="comment-content">
+   <div class="comment-input-form">
+     <%= form_with url: post_comments_path(post_id: @post.id), method: :post  do |f| %> 
+      <p class="comment-text">コメント</p>
+      <%= f.text_area :comment ,class: "comment-textbox"%>
+      <%= f.submit "送信",class: "comment-submit btn" %>
+     <% end %>
+   </div>
+  <%if @post.comments %>
+   <% @post.comments.each do|comment|%>
+    <div class="comments">
+     <p class="comment-user">
+       <a href="/users/<%= comment.user.id %>"><%= comment.user.name %></a>
+     </p>
+     <p class="comment-text">
+       <%= comment.comment%>
+      </p>
+     </div>
+     <%end%>
+  <%end%>
+  </div>
+</div>

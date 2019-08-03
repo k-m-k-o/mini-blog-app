@@ -1,0 +1,21 @@
+<div class="user-container">
+  <div class="user-status">
+  <div class="user-profile">
+    <p>ユーザネーム：<%= @user.name %></p>
+    <p>プロフィール：<%= @user.profile %></p>
+    
+  </div>
+  <%if user_signed_in? && @user.id == current_user.id %>
+     <div class="user-edit">
+      <%= link_to"登録情報の編集","/users/edit",class: "user-edit-btn btn"%>
+     </div>
+  <%end%>
+  </div>
+  <div class="user-posts">
+    <% @posts.each do |post| %>
+      <%= render :partial => "posts/post", :locals => { post: post } %>
+    <%end%>
+  </div>
+   <%= paginate @posts,class: "page-btn" %>
+
+</div>

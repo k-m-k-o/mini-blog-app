@@ -1,0 +1,43 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-container{
+  width:80%;
+  margin:0 auto;
+  padding-top:80px;
+}
+.user-status{
+  width:90%;
+  margin:10px auto;
+  padding-bottom:20px;
+  border:solid 0.3px #3cb371;
+  
+  min-height:100px;
+  height:auto;
+  overflow:hidden;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.6);
+  background-color: #e5ffff;
+  
+}
+
+.field {
+  width:80%;
+  
+  padding-top:20px;
+ 
+}
+.user-edit-btn{
+  text-decoration: none;
+}
+.user-profile{
+  padding-left:20px;
+
+}
+.user-edit{
+  float:right;
+  padding-right: 20px;
+}
+.user-content{
+  width:80%;
+  margin:0 auto;
+}

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="new-post-form">
+    <%= form_for @post do |f| %>
+      <p>タイトル</p>
+      <%= f.text_field :title %>
+      <p>投稿詳細</p>
+      <%= f.text_area :text %>
+      <%= f.submit %>
+      
+    <%end%>
+  </div>
+
+</div>
